@@ -12,3 +12,8 @@
 .active{
     background: rgb(11, 214, 62) !important;
 }
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
