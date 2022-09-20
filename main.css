@@ -8,3 +8,7 @@
 .symbole-size{
     font-size: 80px;
 }
+
+.active{
+    background: rgb(11, 214, 62) !important;
+}
