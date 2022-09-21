@@ -74,17 +74,18 @@ if (btn1 === btn2 && btn1 === btn3 && btn1 != '' && btn2 != ''  && btn3 != '' ||
   
 let visible = document.querySelector('.alert-notif').style.visibility = 'visible';
 let blur = document.getElementById("body-game").classList.add("game-body");
-let desable_btn = document.querySelectorAll(".box").disabled = true;
+let disable_btn = document.querySelectorAll("btn1").disabled;
+let onWinning = setTimeout(() => { visible ;blur; disable_btn }, "200");
 
 
- if (btn1 === btn2 && btn1 === btn3) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn4 === btn5 && btn4 === btn6) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn7 === btn8 && btn7 === btn9) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn1 === btn5 && btn1 === btn9) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn3 === btn5 && btn3 === btn7) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn1 === btn4 && btn1 === btn7) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn2 === btn5 && btn2 === btn8) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
- if (btn3 === btn6 && btn3 === btn9) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn1 === btn2 && btn1 === btn3) { onWinning }
+ if (btn4 === btn5 && btn4 === btn6) { onWinning}
+ if (btn7 === btn8 && btn7 === btn9) { onWinning}
+ if (btn1 === btn5 && btn1 === btn9) { onWinning}
+ if (btn3 === btn5 && btn3 === btn7) { onWinning}
+ if (btn1 === btn4 && btn1 === btn7) { onWinning}
+ if (btn2 === btn5 && btn2 === btn8) { onWinning}
+ if (btn3 === btn6 && btn3 === btn9) { onWinning}
 }
 
 });
