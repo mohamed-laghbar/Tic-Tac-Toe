@@ -11,11 +11,11 @@
 </head>
 <body onload="setPlayersName()">
 
-<div class="d-flex justify-content-center  ">
+<div class="d-flex justify-content-center" id="body-game">
     
     <div>
 
-        <div class="d-flex flex-row mb-3 justify-content-between">
+        <div class="d-flex flex-row mb-3  justify-content-between">
 
             <button  class="btn m-4 btn-danger"><a class="text-decoration-none text-light" href="game.html">New Round</a></button>
             <button  class="btn m-4 btn-primary"><a class="text-decoration-none text-light" href="index.html">New Game</a></button>
@@ -53,6 +53,15 @@
 
     </div>
 
+</div>
+
+<div id="badr" class=" alert alert-info w-50 mx-auto alert-notif">
+       <h1 class="p-2 fw-bold">The winner is <span id="winnerIs"></span></h1> 
+       <div class="d-flex flex-row mb-3  justify-content-between">
+
+        <button  class="btn m-4 btn-danger"><a class="text-decoration-none text-light" href="game.html">New Round</a></button>
+        <button  class="btn m-4 btn-primary"><a class="text-decoration-none text-light" href="index.html">New Game</a></button>
+    </div>
 </div>
 
 

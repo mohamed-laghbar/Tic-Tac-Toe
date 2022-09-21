@@ -21,3 +21,16 @@
   #first-player,#second-player{
     font-family:'Times New Roman', Times, serif;
   }
+
+  .alert-notif{
+    position: relative;
+    top: -400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100px;
+    visibility: hidden;
+  }
+
+  .game-body{
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+  }
