@@ -72,16 +72,19 @@ let btn9 = document.getElementById('btn9').innerText;
 
 if (btn1 === btn2 && btn1 === btn3 && btn1 != '' && btn2 != ''  && btn3 != '' || btn4 === btn5 && btn4 === btn6 && btn4 != '' && btn5 != ''  && btn6 != '' || btn7 === btn8 && btn7 === btn9 && btn7 != '' && btn8 != ''  && btn9 != '' || btn1 === btn5 && btn1 === btn9 && btn1 != '' && btn5 != ''  && btn9 != '' || btn3 === btn5 && btn3 === btn7 && btn3 != '' && btn5 != ''  && btn7 != '' || btn1 === btn4 && btn1 === btn7 && btn1 != '' && btn4 != ''  && btn7 != '' || btn2 === btn5 && btn2 === btn8 && btn2 != '' && btn5 != ''  && btn8 != '' || btn3 === btn6 && btn3 === btn9 && btn3 != '' && btn6 != ''  && btn9 != '') {
   
+let visible = document.querySelector('.alert-notif').style.visibility = 'visible';
+let blur = document.getElementById("body-game").classList.add("game-body");
+let desable_btn = document.querySelectorAll(".box").disabled = true;
 
 
- if (btn1 === btn2 && btn1 === btn3) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body"); }, "500");}
- if (btn4 === btn5 && btn4 === btn6) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
- if (btn7 === btn8 && btn7 === btn9) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
- if (btn1 === btn5 && btn1 === btn9) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
- if (btn3 === btn5 && btn3 === btn7) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
- if (btn1 === btn4 && btn1 === btn7) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
- if (btn2 === btn5 && btn2 === btn8) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
- if (btn3 === btn6 && btn3 === btn9) { setTimeout(() => { document.querySelector('.alert-notif').style.visibility = 'visible';document.getElementById("body-game").classList.add("game-body");  }, "500");}
+ if (btn1 === btn2 && btn1 === btn3) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn4 === btn5 && btn4 === btn6) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn7 === btn8 && btn7 === btn9) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn1 === btn5 && btn1 === btn9) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn3 === btn5 && btn3 === btn7) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn1 === btn4 && btn1 === btn7) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn2 === btn5 && btn2 === btn8) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
+ if (btn3 === btn6 && btn3 === btn9) { setTimeout(() => { visible ;blur; desable_btn }, "200");}
 }
 
 });
