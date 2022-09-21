@@ -10,13 +10,24 @@
     <title>Tic Tac Toe</title>
 </head>
 <body onload="setPlayersName()">
-<div class="d-flex justify-content-center container-margin ">
+
+<div class="d-flex justify-content-center  ">
+    
     <div>
+
         <div class="d-flex flex-row mb-3 justify-content-between">
 
-            <div id="first-player" class="fs-4 text-danger fw-bold"> </div> 
-            <div id="second-player" class="fs-4 text-danger fw-bold"></div> 
+            <button  class="btn m-4 btn-danger"><a class="text-decoration-none text-light" href="game.html">New Round</a></button>
+            <button  class="btn m-4 btn-primary"><a class="text-decoration-none text-light" href="index.html">New Game</a></button>
         </div>
+        
+        <div class="d-flex flex-row mb-3 justify-content-between">
+
+            <div id="first-player" class="fs-3 text-success rounded fw-bold"></div> 
+            <div id="second-player" class="fs-3 text-success rounded fw-bold"></div> 
+        </div>
+
+   
 
     <div id="selectedBox">
         <div class="row ">
@@ -39,7 +50,6 @@
     </div>
    
 
-        <button onclick="start()" class="btn container-margin btn-danger"><a class="text-decoration-none text-light" href="index.html">New Game</a></button>
 
     </div>
 

@@ -17,7 +17,7 @@ function setPlayersName()
 
 function start()
 {
-  localStorage.clear();
+  window.onload();
 }
 
 
