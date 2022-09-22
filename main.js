@@ -1,14 +1,16 @@
 function storeNames() {
   let firstName = document.getElementById("first-name").value;
   let secondName = document.getElementById("second-name").value;
+  
   localStorage.setItem("first", firstName);
   localStorage.setItem("second", secondName);
 }
 function setPlayersName() {
   let firstPlayer = document.getElementById("first-player");
   let secondPlayer = document.getElementById("second-player");
-  firstPlayer.innerHTML = localStorage.getItem('first');;
-  secondPlayer.innerHTML = localStorage.getItem('second');;
+
+  firstPlayer.innerHTML = localStorage.getItem('first');
+  secondPlayer.innerHTML = localStorage.getItem('second');
 }
 function start() {
   window.onload();
@@ -17,7 +19,8 @@ let turn = 'x';
 const simo = document.getElementById("selectedBox");
 simo.addEventListener('click', (e) => {
   if (e.target.tagName == 'BUTTON') {
-    if (e.target.innerHTML == '') {
+    if (e.target.innerHTML == '') 
+    {
       let currentChoise = turn;
       switch (e.target.innerHTML == '') {
         case currentChoise == 'x':
@@ -53,7 +56,8 @@ simo.addEventListener('click', (e) => {
         document.getElementById("btn"+i).disabled = true;
       }
     }
-    let onWinning = setTimeout(() => { visible; blur; disable_btn();  }, "100");
+    let noWinner = false;
+    let onWinning = setTimeout(() => { visible; noWinner = true; blur; disable_btn();  }, "50");
     let letter;
     function winner(letter)
     {
@@ -71,7 +75,7 @@ simo.addEventListener('click', (e) => {
       }
     }
 
-    if (btn1 === btn2 && btn1 === btn3) { onWinning ,winner(btn1) }
+    if (btn1 === btn2 && btn1 === btn3) { onWinning ,winner(btn1)}
     if (btn7 === btn8 && btn7 === btn9) { onWinning ,winner(btn7)}
     if (btn1 === btn5 && btn1 === btn9) { onWinning ,winner(btn5)}
     if (btn4 === btn5 && btn4 === btn6) { onWinning ,winner(btn4)}
@@ -79,7 +83,8 @@ simo.addEventListener('click', (e) => {
     if (btn1 === btn4 && btn1 === btn7) { onWinning ,winner(btn1)}
     if (btn2 === btn5 && btn2 === btn8) { onWinning ,winner(btn2)}
     if (btn3 === btn6 && btn3 === btn9) { onWinning ,winner(btn3)}
-  }
+} 
+
 
 });
 
@@ -89,6 +94,7 @@ function soundOn()
 {
    document.getElementById('bg-sound').play();
 }
+soundOn();
 
 function soundOff()
 {
