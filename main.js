@@ -41,21 +41,44 @@ simo.addEventListener('click', (e) => {
   let btn8 = document.getElementById('btn8').innerText;
   let btn9 = document.getElementById('btn9').innerText;
 
+
   if (btn1 === btn2 && btn1 === btn3 && btn1 != '' && btn2 != '' && btn3 != '' || btn4 === btn5 && btn4 === btn6 && btn4 != '' && btn5 != '' && btn6 != '' || btn7 === btn8 && btn7 === btn9 && btn7 != '' && btn8 != '' && btn9 != '' || btn1 === btn5 && btn1 === btn9 && btn1 != '' && btn5 != '' && btn9 != '' || btn3 === btn5 && btn3 === btn7 && btn3 != '' && btn5 != '' && btn7 != '' || btn1 === btn4 && btn1 === btn7 && btn1 != '' && btn4 != '' && btn7 != '' || btn2 === btn5 && btn2 === btn8 && btn2 != '' && btn5 != '' && btn8 != '' || btn3 === btn6 && btn3 === btn9 && btn3 != '' && btn6 != '' && btn9 != '') {
    
     let visible = document.querySelector('.alert-notif').style.visibility = 'visible';
     let blur = document.getElementById("body-game").classList.add("game-body");
-    let disable_btn = function(){for (let i = 1; i < 10; i++) {document.getElementById("btn"+i).disabled = true;i}}
-    let onWinning = setTimeout(() => { visible; blur; disable_btn() }, "200");
+    let disable_btn = function()
+    {
+      for (let i = 1; i < 10; i++) 
+      {
+        document.getElementById("btn"+i).disabled = true;
+      }
+    }
+    let onWinning = setTimeout(() => { visible; blur; disable_btn();  }, "100");
+    let letter;
+    function winner(letter)
+    {
+      let firstPlayer = document.getElementById("first-player");
+      let secondPlayer = document.getElementById("second-player");
+      let winnerIs = document.getElementById('winnerIs');
 
-    if (btn1 === btn2 && btn1 === btn3) { onWinning }
-    if (btn4 === btn5 && btn4 === btn6) { onWinning }
-    if (btn7 === btn8 && btn7 === btn9) { onWinning }
-    if (btn1 === btn5 && btn1 === btn9) { onWinning }
-    if (btn3 === btn5 && btn3 === btn7) { onWinning }
-    if (btn1 === btn4 && btn1 === btn7) { onWinning }
-    if (btn2 === btn5 && btn2 === btn8) { onWinning }
-    if (btn3 === btn6 && btn3 === btn9) { onWinning }
+
+      if (letter === 'O') 
+      {
+          winnerIs.innerHTML = secondPlayer.innerHTML;
+      }else if (letter === 'X') 
+      {
+          winnerIs.innerHTML = firstPlayer.innerHTML;
+      }
+    }
+
+    if (btn1 === btn2 && btn1 === btn3) { onWinning ,winner(btn1) }
+    if (btn7 === btn8 && btn7 === btn9) { onWinning ,winner(btn7)}
+    if (btn1 === btn5 && btn1 === btn9) { onWinning ,winner(btn5)}
+    if (btn4 === btn5 && btn4 === btn6) { onWinning ,winner(btn4)}
+    if (btn3 === btn5 && btn3 === btn7) { onWinning ,winner(btn3)}
+    if (btn1 === btn4 && btn1 === btn7) { onWinning ,winner(btn1)}
+    if (btn2 === btn5 && btn2 === btn8) { onWinning ,winner(btn2)}
+    if (btn3 === btn6 && btn3 === btn9) { onWinning ,winner(btn3)}
   }
 
 });
