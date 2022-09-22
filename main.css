@@ -24,7 +24,7 @@
 
   .alert-notif{
     position: relative;
-    top: -400px;
+    top: -500px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     visibility: hidden;
   }
@@ -32,4 +32,16 @@
   .game-body{
     filter: blur(6px);
     -webkit-filter: blur(6px);
+  }
+
+  .index-bg{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .sound-icon{
+    font-size: 40px;
+    color: rgb(2, 145, 21);
+  }
+  body{
+    overflow: hidden;
   }

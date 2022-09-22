@@ -85,4 +85,15 @@ simo.addEventListener('click', (e) => {
 
 
 
+function soundOn()
+{
+   document.getElementById('bg-sound').play();
+}
+
+function soundOff()
+{
+  document.getElementById('bg-sound').pause();
+
+}
+
 
