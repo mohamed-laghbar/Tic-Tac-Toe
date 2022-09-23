@@ -45,3 +45,12 @@
   body{
     overflow: hidden;
   }
+  .noWinner{
+    position: relative;
+    top: -700px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 200px;
+    background: rgb(91, 12, 12);
+    visibility: hidden ;
+  }
+  

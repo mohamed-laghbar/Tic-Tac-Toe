@@ -44,9 +44,16 @@ simo.addEventListener('click', (e) => {
   let btn8 = document.getElementById('btn8').innerText;
   let btn9 = document.getElementById('btn9').innerText;
 
+  if (! [btn1, btn2, btn3,btn4,btn5,btn6,btn7,btn8,btn9].includes('')) {
+
+    document.getElementById('alert-red').style.visibility = 'visible';
+    document.getElementById("body-game").classList.add("game-body");
+    
+  }
 
   if (btn1 === btn2 && btn1 === btn3 && btn1 != '' && btn2 != '' && btn3 != '' || btn4 === btn5 && btn4 === btn6 && btn4 != '' && btn5 != '' && btn6 != '' || btn7 === btn8 && btn7 === btn9 && btn7 != '' && btn8 != '' && btn9 != '' || btn1 === btn5 && btn1 === btn9 && btn1 != '' && btn5 != '' && btn9 != '' || btn3 === btn5 && btn3 === btn7 && btn3 != '' && btn5 != '' && btn7 != '' || btn1 === btn4 && btn1 === btn7 && btn1 != '' && btn4 != '' && btn7 != '' || btn2 === btn5 && btn2 === btn8 && btn2 != '' && btn5 != '' && btn8 != '' || btn3 === btn6 && btn3 === btn9 && btn3 != '' && btn6 != '' && btn9 != '') {
-   
+
+
     let visible = document.querySelector('.alert-notif').style.visibility = 'visible';
     let blur = document.getElementById("body-game").classList.add("game-body");
     let disable_btn = function()
@@ -56,8 +63,7 @@ simo.addEventListener('click', (e) => {
         document.getElementById("btn"+i).disabled = true;
       }
     }
-    let noWinner = false;
-    let onWinning = setTimeout(() => { visible; noWinner = true; blur; disable_btn();  }, "50");
+    let onWinning = setTimeout(() => { visible; blur; disable_btn(); }, "50");
     let letter;
     function winner(letter)
     {
@@ -76,13 +82,20 @@ simo.addEventListener('click', (e) => {
     }
 
     if (btn1 === btn2 && btn1 === btn3) { onWinning ,winner(btn1)}
-    if (btn7 === btn8 && btn7 === btn9) { onWinning ,winner(btn7)}
-    if (btn1 === btn5 && btn1 === btn9) { onWinning ,winner(btn5)}
-    if (btn4 === btn5 && btn4 === btn6) { onWinning ,winner(btn4)}
-    if (btn3 === btn5 && btn3 === btn7) { onWinning ,winner(btn3)}
-    if (btn1 === btn4 && btn1 === btn7) { onWinning ,winner(btn1)}
-    if (btn2 === btn5 && btn2 === btn8) { onWinning ,winner(btn2)}
-    if (btn3 === btn6 && btn3 === btn9) { onWinning ,winner(btn3)}
+   else if (btn7 === btn8 && btn7 === btn9) { onWinning ,winner(btn7)}
+   else if (btn1 === btn5 && btn1 === btn9) { onWinning ,winner(btn5)}
+   else if (btn4 === btn5 && btn4 === btn6) { onWinning ,winner(btn4)}
+   else if (btn3 === btn5 && btn3 === btn7) { onWinning ,winner(btn3)}
+   else if (btn1 === btn4 && btn1 === btn7) { onWinning ,winner(btn1)}
+   else if (btn2 === btn5 && btn2 === btn8) { onWinning ,winner(btn2)}
+   else if (btn3 === btn6 && btn3 === btn9) { onWinning ,winner(btn3)}
+
+  
+    
+
+    
+
+
 } 
 
 
@@ -101,5 +114,7 @@ function soundOff()
   document.getElementById('bg-sound').pause();
 
 }
+
+
 
 

@@ -59,28 +59,40 @@
 
             <div class="d-flex flex-row mb-3  justify-content-between">
                 
-                <button class="btn m-4 btn-danger "><a class="text-decoration-none text-light" href="game.html">New Round</a></button>
+                <button class="btn m-4 btn-warning "><a class="text-decoration-none fs-5 text-dark" href="game.html">New Round</a></button>
                 <button onclick="soundOn()" id="sound-on" class="btn sound-icon "><i class="bi bi-volume-down-fill"></i></i></button>
                 <button onclick="soundOff()" id="sound-off" class="btn sound-icon"><i class="bi bi-volume-mute-fill"></i></button>
-                <button class="btn m-4 btn-primary"><a class="text-decoration-none text-light" href="index.html">New Game</a></button>
+                <button class="btn m-4 btn-primary"><a class="text-decoration-none fs-5 text-light" href="index.html">New Game</a></button>
              
             </div>
 
         </div>
 
     </div>
+     
 
     <div id="badr" class=" alert alert-success w-50 mx-auto alert-notif ">
         <h1 class="p-2 text-dark fw-light">The winner is <span id="winnerIs" class="fw-bold" ></span></h1>
         <div class="d-flex flex-row   justify-content-between">
 
-            <button class="btn m-4 btn-danger"><a class="text-decoration-none text-light" href="game.html">New
+            <button class="btn m-4 btn-danger"><a class="text-decoration-none fs-5 text-light" href="game.html">New
                     Round</a></button>
-            <button class="btn m-4 btn-primary"><a class="text-decoration-none text-light" href="index.html">New
+            <button class="btn m-4 btn-primary"><a class="text-decoration-none fs-5 text-light" href="index.html">New
                     Game</a></button>
         </div>
     </div>
 
+
+
+    <div id="alert-red" class="noWinner alert alert-red w-50  mx-auto p-3 ">
+        <p class="fs-1 text-light fw-bold">You hit a wall, don't worry, try again <i class="text-warning fs-2 bi bi-emoji-frown"></i></p>
+        <div class="d-flex flex-row   justify-content-between">
+
+            <button class="btn m-4 btn-warning"><a class="text-decoration-none fs-5 text-dark" href="game.html">Try Again</a></button>
+            <button class="btn m-4 btn-primary"><a class="text-decoration-none fs-5 text-light" href="index.html">New
+                    Game</a></button>
+        </div>
+      </div>
 
     <audio src="music/bg.mp3" id="bg-sound"></audio>
     <audio src="music/lose.mp3" id="lose-sound"></audio>
