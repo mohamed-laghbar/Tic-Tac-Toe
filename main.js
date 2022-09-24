@@ -1,6 +1,10 @@
+
 function storeNames() {
   let firstName = document.getElementById("first-name").value;
   let secondName = document.getElementById("second-name").value;
+
+  window.URL('www.google.com')
+
   
   localStorage.setItem("first", firstName);
   localStorage.setItem("second", secondName);
