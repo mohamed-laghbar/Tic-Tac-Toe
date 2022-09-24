@@ -2,12 +2,16 @@
 function storeNames() {
   let firstName = document.getElementById("first-name").value;
   let secondName = document.getElementById("second-name").value;
-
-  window.URL('www.google.com')
-
-  
+  let err = document.getElementById("err");
+  if ( firstName != '' && secondName != '') {
+    
   localStorage.setItem("first", firstName);
   localStorage.setItem("second", secondName);
+    window.location.replace('http://127.0.0.1:5500/game.html')
+  }else err.classList.remove('d-none')
+
+
+  
 }
 function setPlayersName() {
   let firstPlayer = document.getElementById("first-player");
