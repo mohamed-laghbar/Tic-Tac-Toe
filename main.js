@@ -51,10 +51,13 @@ simo.addEventListener('click', (e) => {
   let btn7 = document.getElementById('btn7').innerText;
   let btn8 = document.getElementById('btn8').innerText;
   let btn9 = document.getElementById('btn9').innerText;
+
   if (! [btn1, btn2, btn3,btn4,btn5,btn6,btn7,btn8,btn9].includes('')  ) {
     document.querySelector('.alert-notif').style.visibility = 'hidden';
     document.getElementById('alert-red').style.visibility = 'visible';
     document.getElementById("body-game").classList.add("game-body");
+    document.getElementById('bg-sound').pause();
+    document.getElementById('lose-sound').play();
 
     
   }
