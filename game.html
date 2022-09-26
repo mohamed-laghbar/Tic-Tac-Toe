@@ -16,10 +16,10 @@
     <title>Tic Tac Toe</title>
 </head>
 
-<body onload="setPlayersName()">
+<body onload="setPlayersName() ">
   
 
-    <div class="d-flex justify-content-center" id="body-game">
+    <div class="d-flex justify-content-center" onloadstart="soundOn()" id="body-game">
 
         <div>
 
@@ -96,6 +96,7 @@
 
     <audio src="music/bg.mp3" id="bg-sound"></audio>
     <audio src="music/lose.mp3" id="lose-sound"></audio>
+    <audio src="music/winner.mp3" id="winner-sound"></audio>
     <script src="main.js"></script>
 </body>
 
